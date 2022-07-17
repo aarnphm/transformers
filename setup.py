@@ -256,8 +256,8 @@ extras = {}
 extras["ja"] = deps_list("fugashi", "ipadic", "unidic_lite", "unidic", "sudachipy", "sudachidict_core", "rhoknp")
 extras["sklearn"] = deps_list("scikit-learn")
 
-extras["tf"] = deps_list("tensorflow", "onnxconverter-common", "tf2onnx", "tensorflow-text", "keras-nlp")
-extras["tf-cpu"] = deps_list("tensorflow-cpu", "onnxconverter-common", "tf2onnx", "tensorflow-text", "keras-nlp")
+extras["tf"] = deps_list("tensorflow", "onnxconverter-common", "tf2onnx", "keras-nlp")
+extras["tf-cpu"] = deps_list("tensorflow-cpu", "onnxconverter-common", "tf2onnx", "keras-nlp")
 
 extras["torch"] = deps_list("torch", "accelerate")
 extras["accelerate"] = deps_list("accelerate")
@@ -330,8 +330,7 @@ extras["deepspeed-testing"] = extras["deepspeed"] + extras["testing"] + extras["
 extras["quality"] = deps_list("black", "datasets", "isort", "ruff", "GitPython", "hf-doc-builder", "urllib3")
 
 extras["all"] = (
-    extras["tf"]
-    + extras["torch"]
+    extras["torch"]
     + extras["flax"]
     + extras["sentencepiece"]
     + extras["tokenizers"]
@@ -342,7 +341,6 @@ extras["all"] = (
     + extras["torch-vision"]
     + extras["codecarbon"]
     + extras["accelerate"]
-    + extras["video"]
 )
 
 # Might need to add doc-builder and some specific deps in the future
@@ -363,7 +361,6 @@ extras["dev-torch"] = (
     + extras["torch-vision"]
     + extras["codecarbon"]
     + extras["quality"]
-    + extras["ja"]
     + extras["docs_specific"]
     + extras["sklearn"]
     + extras["modelcreation"]
@@ -386,7 +383,6 @@ extras["dev"] = (
     extras["all"]
     + extras["testing"]
     + extras["quality"]
-    + extras["ja"]
     + extras["docs_specific"]
     + extras["sklearn"]
     + extras["modelcreation"]
