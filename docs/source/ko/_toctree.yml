@@ -49,8 +49,8 @@
     - sections:
       - local: tasks/sequence_classification
         title: 텍스트 분류
-      - local: in_translation
-        title: (번역중) Token classification
+      - local: tasks/token_classification
+        title: 토큰 분류
       - local: in_translation
         title: (번역중) Question answering
       - local: in_translation
@@ -89,8 +89,8 @@
       title: (번역중) Depth estimation
     title: (번역중) 컴퓨터 비전
   - sections:
-    - local: in_translation
-      title: (번역중) Image captioning
+    - local: tasks/image_captioning
+      title: 이미지 캡셔닝
     - local: in_translation
       title: (번역중) Document Question Answering
     title: (번역중) 멀티모달
